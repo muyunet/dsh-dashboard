@@ -1,0 +1,10 @@
+# This plugin ships no dependencies: the two it needs are inlined under vendor/.
+# A node_modules here would mean someone followed stale instructions.
+node_modules/
+
+# Written by test/ledger.test.mjs.
+test/.tmp/
+
+*.log
+.DS_Store
+Thumbs.db

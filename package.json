@@ -1,0 +1,59 @@
+{
+  "name": "@muyunet/dsh-dashboard",
+  "version": "1.0.0",
+  "description": "Data dashboard panel for the dsh web client: greeting, usage heatmap, peak/off-peak indicator, token and spend totals, and account balance",
+  "type": "module",
+  "license": "GPL-3.0-only",
+  "icon": "./icon.svg",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muyunet/dsh-dashboard.git"
+  },
+  "homepage": "https://github.com/muyunet/dsh-dashboard#readme",
+  "bugs": {
+    "url": "https://github.com/muyunet/dsh-dashboard/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "cordis",
+    "plugin",
+    "bundle",
+    "dashboard",
+    "usage",
+    "token",
+    "heatmap",
+    "peak-hours",
+    "pricing"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "lib",
+    "vendor",
+    "locale",
+    "icon.svg",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  }
+}

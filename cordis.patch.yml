@@ -1,0 +1,6 @@
+# The dashboard bundle: one Host row that owns the usage ledger, the pricing
+# table and the snapshot route, plus the Client module declared by
+# `dsh.client` in package.json (the sidebar entry and the main panel).
+- insert:
+    - id: usage-dashboard
+      name: '@muyunet/dsh-dashboard'
